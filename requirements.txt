@@ -1,6 +1,0 @@
-﻿googletrans==3.1.0a0
-httpx==0.13.3
-pykakasi==2.3.0
-requests==2.32.5
-streamlit==1.52.2
-cgi
