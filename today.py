@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 import re
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 from pykakasi import kakasi
 import streamlit.components.v1 as components
 
@@ -11,8 +11,7 @@ def contains_kanji(text):
 
 def translate_word(word):
     try:
-        translator = Translator()
-        return translator.translate(word, src="en", dest="ja").text
+        return GoogleTranslator(source="en", target="ja").translate(word)
     except:
         return None
 
@@ -100,7 +99,6 @@ if st.button("Generate Random Word"):
             color: var(--txt);
         }}
 
-        /* BIG FONT FOR JAPANESE & KANA */
         .jp-big {{
             font-size: 42px;
             font-weight: 700;
